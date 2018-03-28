@@ -1,0 +1,32 @@
+from django.db import models
+
+class AppTypes(models.Model):
+    types = models.CharField(max_length=15, verbose_name="Название типа")
+    abbr = models.CharField(max_length=3, verbose_name="Абревиатура типа")
+
+class Application(models.Model):
+    date = models.DateField(verbose_name="Дата")
+    types = models.IntegerField(verbose_name="Тип")
+    time = models.TimeField(verbose_name="Время")
+    order = models.IntegerField(verbose_name="Наряд")
+    port = models.IntegerField(verbose_name="Порт")
+    problem = models.IntegerField(verbose_name="Проблема")
+    personal_account = models.IntegerField(verbose_name="Личный счет")
+    address = models.IntegerField(verbose_name="Адрес")
+    telephone = models.IntegerField(verbose_name="Номер телефона")
+    tariff = models.IntegerField(verbose_name="Тариф")
+    router = models.IntegerField(verbose_name="Роутер")
+    router_pro = models.IntegerField(verbose_name="Роутер ПРО")
+    tuner = models.IntegerField(verbose_name="Тюнер")
+    activation = models.IntegerField(verbose_name="активация")
+    master = models.IntegerField(verbose_name="Мастер")
+    status = models.IntegerField(verbose_name="Статус")
+    error = models.IntegerField(verbose_name="Причины")
+    success = models.IntegerField(verbose_name="Тип работы")
+    comment = models.IntegerField(verbose_name="Комментарий отчета")
+    connectors = models.IntegerField(verbose_name="Коннекторы")
+    utp_internal = models.IntegerField(verbose_name="Внутренний кабель")
+    utp_external = models.IntegerField(verbose_name="Внешний кабель")
+    num_router = models.IntegerField(verbose_name="Серийник роутера")
+    num_tuner = models.IntegerField(verbose_name="MAC тюнера")
+    comments = models.IntegerField(verbose_name="Комментарий")
